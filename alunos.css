@@ -29,9 +29,14 @@ body {
 @media screen and (max-width: 576px) {
     body{
         margin-left: 650px;
+        height: 180vh;
     }
     .nav{
         justify-content: start;
+    }
+    .header{
+        margin-top: -50vh;
+        margin-left: -420px;
     }
 }
 
