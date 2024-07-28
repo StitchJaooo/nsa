@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSA - Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="nsaonline.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="card">
+        <div class="header">
+            <img src="nsaonline.png">
+        </div>
+        <div class="content">
+            <p>
+                <label>Entrar como:</label>
+                <select name="select">
+                    <option value="Aluno">ALUNO</option>
+                    <option value="Aluno">ETEC</option>
+                    <option value="Aluno">PROFESSOR</option>
+                    <option value="Aluno">RESPONSAVEL</option>
+                    <option value="Aluno">SUPERVISÃO</option>
+                    <option value="Aluno">MONITORAMENTO</option>
+                </select>
+            </p>
+            <p>
+                <label>Cod. Etec:</label>
+                <input type="text" id="cod">
+                <button id="cod2">?</button>
+            </p>
+            <p>
+                <label>RM:</label>
+                <input type="text" placeholder="Digite seu login" id="rm" name="rm">
+            </p>
+            </p>
+            <p>
+                <label>Senha:</label>
+                <input type="password" placeholder="Digite sua senha" id="password" name="senha">
+            </p>
+            <p id="enter">
+                <button id="entrar">ENTRAR</button>
+            </p>
+        </div>
+        <div class="link">
+            <a href="">Solicitar nova senha</a>
+        </div>
+        <div class="systems">
+            <img src="android.png" alt="">
+            <img src="apple-ios.png" alt="">
+        </div>
+        <div class="footer">
+            <p>© Sistema NSA - Desde 2008</p>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h3>MENSAGEM DO NSA - ONLINE</h3>
+            <p>Usúario ou senha errados</p>
+            <button class="close-btn">Fechar</button>
+        </div>
+    </div>
+    <script>
+        const entrar = document.getElementById('entrar');
+        const meuDialogo = document.querySelector('dialog');
+        const fecharDialogo = document.getElementById('fecharDialogo');
+
+        entrar.addEventListener('click', () => {
+            let user = document.getElementById('rm').value;
+            let password = document.getElementById('password').value;
+            if (user == 23129 & password == "Jp_716599") {
+                window.location.href = "alunos.html"
+            } else {
+                document.getElementById('modal').style.display = 'block';
+            }
+        });
+
+        document.querySelector('.close-btn').onclick = function () {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        window.onclick = function (event) {
+            if (event.target == document.getElementById('modal')) {
+                document.getElementById('modal').style.display = 'none';
+            }
+        }
+
+    </script>
+
+</body>
+
+
+</html>
