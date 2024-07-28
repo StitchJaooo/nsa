@@ -101,7 +101,7 @@ li:hover {
     text-transform: uppercase;
 }
 
-.mencoes:hover .dropdown {
+.mencoes:hover .dropdown, .mencoes:active .dropdown{
     visibility: visible;
     opacity: 1;
 }
